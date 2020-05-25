@@ -1,10 +1,10 @@
-var path = require('path')
-var fs = require('fs')
-var glob = require('glob')
-var postcss = require('postcss')
-var mkdirp = require('mkdirp')
-var watch = require('watch')
-var async = require('async')
+const path = require('path')
+const fs = require('fs')
+const glob = require('glob')
+const postcss = require('postcss')
+const mkdirp = require('mkdirp')
+const watch = require('watch')
+const async = require('async')
 
 /**
  * sails-hook-postcss
