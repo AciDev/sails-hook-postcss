@@ -4,7 +4,6 @@ var glob = require('glob')
 var postcss = require('postcss')
 var mkdirp = require('mkdirp')
 var watch = require('watch')
-var objectAssign = require('object-assign')
 var async = require('async')
 
 /**
@@ -28,11 +27,13 @@ module.exports = function (sails) {
     configure: function () {
       sails.emit('hook:postcss:configuring')
 
-      objectAssign({
+      Object.assign({
         enabled: true,
         cssSourcePath: path.resolve(sails.config.appPath, 'assets', 'styles'),
         cssDestPath: path.resolve(sails.config.paths.public, 'styles')
       }, sails.config[this.configKey])
+
+      Object.
 
       sails.emit('hook:postcss:configured')
     },
