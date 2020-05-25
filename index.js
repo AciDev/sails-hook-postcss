@@ -27,7 +27,7 @@ module.exports = function (sails) {
     configure: function () {
       sails.emit('hook:postcss:configuring')
 
-      Object.assign({
+      sails.config[this.configKey] = Object.assign({
         enabled: true,
         cssSourcePath: path.resolve(sails.config.appPath, 'assets', 'styles'),
         cssDestPath: path.resolve(sails.config.paths.public, 'styles')
