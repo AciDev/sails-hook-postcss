@@ -33,8 +33,6 @@ module.exports = function (sails) {
         cssDestPath: path.resolve(sails.config.paths.public, 'styles')
       }, sails.config[this.configKey])
 
-      Object.
-
       sails.emit('hook:postcss:configured')
     },
 
